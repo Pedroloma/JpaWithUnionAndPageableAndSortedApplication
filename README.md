@@ -2,6 +2,8 @@ This project aims to demonstrate an issue in Spring Data JPA 3.1.X
 
 When you define a JPL that contains UNION clauses, and this JPL is pageable and sorted, an exception is thrown because the SQL is not well formed.
 
+If you run the Spring Boot application, you will get the exception like this:
+
 Caused by: org.hibernate.query.sqm.ParsingException: line 1:62 mismatched input 'ascUNION' expecting {<EOF>, ',', '.', '[', '+', '-', '*', '/', '%', '||', ASC, BY, DAY, DESC, EPOCH, FETCH, HOUR, LIMIT, MINUTE, MONTH, NANOSECOND, NULLS, OFFSET, QUARTER, SECOND, WEEK, YEAR}
 	at org.hibernate.query.hql.internal.StandardHqlTranslator$1.syntaxError(StandardHqlTranslator.java:46) ~[hibernate-core-6.2.22.Final.jar:6.2.22.Final]
 	at org.antlr.v4.runtime.ProxyErrorListener.syntaxError(ProxyErrorListener.java:41) ~[antlr4-runtime-4.10.1.jar:4.10.1]
